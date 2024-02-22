@@ -24,7 +24,10 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
-
+def count(number):
+    for y in range(number):
+        print (y+1)
+count(5)
 ###############################################################################
 # TODO: 2. (5 pts)
 #
@@ -48,9 +51,18 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
-
+def adder():
+    total = 0
+    while True:
+        number = input("Please enter a Number:")
+        number = float(number)
+        if number == 0:
+            break 
+        total += number
+    print("The sum is", total)
+adder()
 ###############################################################################
-# TODO: 3. EXTRA CREDIT (3 pts)
+# DONE: 3. EXTRA CREDIT (3 pts)
 #
 #   DO NOT attempt this extra credit until you have completed m3!!!
 #   
@@ -64,3 +76,15 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def adder():
+    total = 0
+    while True:
+        try:
+            number = float(input("Please enter a number:"))
+            total += (number)
+            if number == 0:
+                break 
+        except ValueError:
+            print("Invalid Input. Please enter a valid number.")
+    print("The sum is", total)
+adder()
